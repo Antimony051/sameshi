@@ -10,6 +10,10 @@ A minimal chess engine supporting a constrained subset of the game.
 
 - Engine source repository: https://github.com/datavorous/sameshi
 
+## code variants
+
+The readable version of the code can be found [here](readable/sameshi.h).
+
 ## core
 
 1. 120 cell mailbox board
