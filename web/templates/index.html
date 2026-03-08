@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sameshi Web Harness</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <h1>Sameshi Arena</h1>
+      <p>Play full-rule chess against the tiny engine.</p>
+      <p class="source-link">
+        Engine source:
+        <a href="https://github.com/datavorous/sameshi" target="_blank" rel="noopener noreferrer">
+          github.com/datavorous/sameshi
+        </a>
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="board-panel">
+        <div id="board" class="board" aria-label="Chess board"></div>
+      </section>
+
+      <section class="control-panel">
+        <div class="card">
+          <h2>New Game</h2>
+          <label for="colorSelect">Play As</label>
+          <select id="colorSelect">
+            <option value="white">White</option>
+            <option value="black">Black</option>
+          </select>
+
+          <label for="depthSelect">Difficulty</label>
+          <select id="depthSelect">
+            <option value="1">Depth 1</option>
+            <option value="2">Depth 2</option>
+            <option value="3">Depth 3</option>
+            <option value="4" selected>Depth 4</option>
+            <option value="5">Depth 5</option>
+            <option value="6">Depth 6</option>
+          </select>
+
+          <button id="newGameBtn" class="primary" type="button">Start Game</button>
+        </div>
+
+        <div class="card">
+          <h2>Game Controls</h2>
+          <div class="actions">
+            <button id="undoBtn" type="button">Undo Full Move</button>
+            <button id="resignBtn" type="button">Resign</button>
+            <button id="quitBtn" type="button">Quit</button>
+          </div>
+          <p class="hint">Promotion is auto-queen for now.</p>
+        </div>
+
+        <div class="card status-card">
+          <h2>Status</h2>
+          <p id="meta" class="meta"></p>
+          <p id="status" class="status"></p>
+          <p id="error" class="error"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
