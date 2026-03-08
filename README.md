@@ -36,6 +36,8 @@ fixed depth 5, constrained rules, max 60 plies.
 
 A local/browser chess app is included to make the engine easy to play and share.
 
+![Sameshi Arena screenshot](screenshot.png)
+
 ### features
 
 - Visual board UI
